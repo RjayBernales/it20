@@ -16,6 +16,7 @@ public class Multidimensional_Array {
                 for(int j=0; j<arrays[i].length;j++) {
             System.out.print(arrays[i][j]);
         }
+                //Added println so it will have a new line
                 System.out.println(" ");
         }
            
