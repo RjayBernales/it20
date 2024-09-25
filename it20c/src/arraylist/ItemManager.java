@@ -20,5 +20,16 @@ public class ItemManager {
         public void addName(String item){
             items.add(item);
             System.out.println("Names: " + items);
-        } 
+        }
+        /*Added a function by using the if-else statement with the right conditions to 
+        update/change the items on the arraylist */
+        public void updateItem(int index, String newItem){
+            if(index >= 0 && index < items.size()){
+                String olditem = items.set(index, newItem);
+                System.out.println("Successfully Updated: " + olditem + " to " + newItem);
+            }
+            else{
+                System.out.println("Index Out of Bounds");
+            }
+        }
 }
