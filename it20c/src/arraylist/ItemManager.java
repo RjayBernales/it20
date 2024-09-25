@@ -44,4 +44,14 @@ public class ItemManager {
                 System.out.println(itemfind + " not found.");
             }
         }
+        /*Added a function to  delete the items depending on the index number
+        that the user wants to delete*/
+        public void deleteItem(int index) {
+        if (index >= 0 && index < items.size()) {
+            String removedItem = items.remove(index);
+            System.out.println("Successfully Deleted: " + removedItem);
+        } else {
+            System.out.println("Index Out of Bounds");
+        }
+    }
 }

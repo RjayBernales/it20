@@ -44,6 +44,17 @@ public class Main {
         //finding item
         list.findItem(findItem);
         list.displayItems();
+        
+        //Added a println that corresponds with the codes on ItemManager.java
+        System.out.println("Enter Index Number of the Name You Want to Delete: ");
+        int deleteIndex = sc.nextInt();
+        
+        //deleting items
+        list.deleteItem(deleteIndex);
+        list.displayItems();
+        
+        //closing the scanner
         sc.close();
+        
     }
 }
