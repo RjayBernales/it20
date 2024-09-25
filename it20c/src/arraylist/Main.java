@@ -36,5 +36,14 @@ public class Main {
         list.displayItems();
         //To revert the code back to String for the next user input
         sc.nextLine();
+        
+        //Added a println that corresponds with the codes on ItemManager.java
+        System.out.println("Enter the Name You Want to Find:" );
+        String findItem = sc.nextLine();
+        
+        //finding item
+        list.findItem(findItem);
+        list.displayItems();
+        sc.close();
     }
 }

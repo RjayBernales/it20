@@ -32,4 +32,16 @@ public class ItemManager {
                 System.out.println("Index Out of Bounds");
             }
         }
+        /*Added a function to  find the items that the user wants to find in the list
+        using if-else statement*/
+        public void findItem(String itemfind) {
+            int index = items.indexOf(itemfind);
+                if (index != -1) {
+                System.out.println("Found: " + itemfind + " at index " + index);
+                } 
+                else 
+                {
+                System.out.println(itemfind + " not found.");
+            }
+        }
 }
