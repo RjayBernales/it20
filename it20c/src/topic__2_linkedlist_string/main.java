@@ -23,7 +23,7 @@ public class main {
             System.out.println("What Do You Want To Do: " + "\n"
                                 + "1. Add Subject" + "\n"
                                 + "2. Delete Numbers" + "\n"
-                                + "3. Sort oor Move Subjects" + "\n"
+                                + "3. Sort or Move Subjects" + "\n"
                                 + "4. Exit Program");
             int choice = sc.nextInt();
             switch(choice){
@@ -43,6 +43,25 @@ public class main {
                     list.printList();
                     
                     break;
+                    
+                    case 2:
+                    //function for deleting a num
+                    sc.nextLine();
+                    System.out.println();
+                    System.out.println("Enter a Subject to Delete From The List");
+                    String name = sc.nextLine();
+                    System.out.println("Do You Really Want to Delete " + name + "?");
+                    String confirmation = sc.nextLine();
+                    if(confirmation.equalsIgnoreCase("yes")){
+                        list.deleteByValue(name);
+                        System.out.println("Subject Deleted");
+                    }
+                    //delete an item by value
+                    System.out.println("Current Subject Load:");
+                    list.printList();
+                    
+                    break;
+                
             }
         }
     }
