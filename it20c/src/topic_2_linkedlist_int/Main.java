@@ -40,9 +40,22 @@ public class Main {
                     list.printList();
                     
                     break;
+                    
+                case 2:
+                    //function for deleting a num
+                    System.out.println();
+                    System.out.println("Enter a Number to Delete From The List");
+                    int namec = sc.nextInt();
+                    //delete an item by value
+                    list.deleteByValue(namec);
+                    System.out.println("Current Linked List:");
+                    list.printList();
+                    
+                    break;
+                
+                
+                
             }
-            
-            
         }
     }
 
