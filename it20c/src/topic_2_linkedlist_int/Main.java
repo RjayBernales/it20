@@ -18,6 +18,7 @@ public class Main {
         int num3 = sc.nextInt();
         int num4 = sc.nextInt();
         int num5 = sc.nextInt();
+        
         //adding the containers for the arays of int
         list.add(num1);
         list.add(num2);
