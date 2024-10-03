@@ -58,7 +58,7 @@ public class Main {
                     //Added a function to swap the position of index 0 to any index num within the array
                     System.out.println();
                     System.out.println("Swapping node from index to index");
-                    System.out.println("Enter the Index Number to Swap From The List");
+                    System.out.println("Enter a Number to Swap From The List");
                     //recieve the user's inputs
                     int index1 = sc.nextInt();
                     int index2 = sc.nextInt();
@@ -68,7 +68,12 @@ public class Main {
                     
                     break;
                     
-                
+                case 4:
+                    System.out.println("Exiting The Program...");
+                    System.exit(0);
+                    
+                    break;
+
             }
         }
     }
