@@ -63,7 +63,7 @@ public class main {
                     
                     break;
                         
-                 case 3:
+                case 3:
                     
                     //Added a function to swap the position of index 0 to any index num within the array
                     System.out.println();
@@ -76,7 +76,15 @@ public class main {
                     list.printList();
                     
                     break;
+                case 4:
+                    System.out.println("Exiting The Program...");
+                    System.exit(0);
                     
+                    break;
+                
+                default:
+                    System.out.println("Error 404 : Can't Find the Requested Number");
+                    System.exit(0);
             }
         }
     }
