@@ -37,6 +37,16 @@ public class Main {
         System.out.println("Current Linked List:");
         list.printList();
         
+        //Added a function to swap the position of index 0 to any index num within the array
+         System.out.println();
+        System.out.println("Swapping node from index to index");
+        System.out.println("Enter a Number to Swap From The List");
+        //recieve the user's inputs
+        int index1 = sc.nextInt();
+        int index2 = sc.nextInt();
+        //for swapping values
+        list.moveNodePointer(index1, index2);
+        list.printList();
 	}
 
 }
