@@ -58,3 +58,25 @@ public class Main {
         
     }
 }
+        /* Expected Output
+        Names: [Jack]
+        Names on our list: [Jack]
+        Enter the Name You Want to Add: 
+        Smith
+        Names: [Jack, Smith]
+        Enter the Name You Want to Change: 
+        Sparrow
+        Enter Index Number: 
+        1
+        Successfully Updated: Smith to Sparrow
+        Names on our list: [Jack, Sparrow]
+        Enter the Name You Want to Find:
+        Jack
+        Found: Jack at index 0
+        Names on our list: [Jack, Sparrow]
+        Enter Index Number of the Name You Want to Delete: 
+        1
+        Successfully Deleted: Sparrow
+        Names on our list: [Jack]
+
+*/
