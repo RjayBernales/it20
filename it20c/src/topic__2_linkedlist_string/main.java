@@ -22,7 +22,7 @@ public class main {
             list.printList();
             System.out.println("What Do You Want To Do: " + "\n"
                                 + "1. Add Subject" + "\n"
-                                + "2. Delete Numbers" + "\n"
+                                + "2. Delete Subject" + "\n"
                                 + "3. Sort or Move Subjects" + "\n"
                                 + "4. Exit Program");
             int choice = sc.nextInt();
@@ -46,6 +46,7 @@ public class main {
                     
                     case 2:
                     //function for deleting a num
+                    //setting back the nextLine for the user input
                     sc.nextLine();
                     System.out.println();
                     System.out.println("Enter a Subject to Delete From The List");
@@ -61,7 +62,21 @@ public class main {
                     list.printList();
                     
                     break;
-                
+                        
+                 case 3:
+                    
+                    //Added a function to swap the position of index 0 to any index num within the array
+                    System.out.println();
+                    System.out.println("Swapping node from index to index");
+                    System.out.println("Enter the Current Index Number of the Subject you want to Swap From The List");
+                    int index1 = sc.nextInt();
+                    System.out.println("Enter the New Index Number of the Subject you want to Swap From The List");
+                    int index2 = sc.nextInt();
+                    list.moveNodePointer(index1, index2);
+                    list.printList();
+                    
+                    break;
+                    
             }
         }
     }
