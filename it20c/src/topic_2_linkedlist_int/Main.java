@@ -73,7 +73,10 @@ public class Main {
                     System.exit(0);
                     
                     break;
-
+                
+                default:
+                    System.out.println("Error 404 : Can't Find the Requested Number");
+                    System.exit(0);
             }
         }
     }
