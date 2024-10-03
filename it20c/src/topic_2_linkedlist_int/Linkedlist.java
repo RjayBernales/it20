@@ -1,6 +1,8 @@
  
 package topic_2_linkedlist_int;
 
+import topic_2_linkedlist_int.Node;
+
 public class Linkedlist {
 	private Node head; 
 
@@ -27,7 +29,6 @@ public class Linkedlist {
         }
         System.out.println("null");
     }
-    
     // Method to delete a node by value
     public void deleteByValue(int value) {
         if (head == null) return;
@@ -47,50 +48,52 @@ public class Linkedlist {
             current = current.next;
         }
     }
-    
-    // Method to move a node to a new position /swap nodes
-    public void moveNodePointer(int currentIndex, int newIndex) {
-        if (head == null || currentIndex == newIndex) return;
-        
-        Node current = head;
-        Node prev = null;
-        Node movingNode = null;
-        Node movingPrev = null;
+        // Method to move a node to a new position /swap nodes
+        public void moveNodePointer(int currentIndex, int newIndex) {
+            if (head == null || currentIndex == newIndex) return;
 
-        // Find the node to move
-        for (int i = 0; current != null && i < currentIndex; i++) {
-            movingPrev = prev;
-            prev = current;
-            current = current.next;
-        }
-        movingNode = current;
+            Node current = head;
+            Node prev = null;
+            Node movingNode = null;
+            Node movingPrev = null;
 
-        // If the node to move was not found
-        if (movingNode == null) return;
+            // Find the node to move
+            for (int i = 0; current != null && i < currentIndex; i++) {
+                movingPrev = prev;
+                prev = current;
+                current = current.next;
+            }
+            movingNode = current;
 
-        // Remove the node from its current position
-        if (movingPrev != null) {
-            movingPrev.next = movingNode.next;
-        } else {
-        	// Moving the head
-            head = movingNode.next; 
-        }
+            // If the node to move was not found
+            if (movingNode == null) return;
 
-        // Insert the node at the new position
-        current = head;
-        prev = null;
-        for (int i = 0; current != null && i < newIndex; i++) {
-            prev = current;
-            current = current.next;
-        }
+            // Remove the node from its current position
+            if (movingPrev != null) {
+                movingPrev.next = movingNode.next;
+            } else {
+                    // Moving the head
+                head = movingNode.next; 
+            }
 
-        if (prev != null) {
-            movingNode.next = current;
-            prev.next = movingNode;
-        } else {
-            movingNode.next = head;
-            head = movingNode;
-        }
+            // Insert the node at the new position
+            current = head;
+            prev = null;
+            for (int i = 0; current != null && i < newIndex; i++) {
+                prev = current;
+                current = current.next;
+            }
+
+            if (prev != null) {
+                movingNode.next = current;
+                prev.next = movingNode;
+            } else {
+                movingNode.next = head;
+                head = movingNode;
+            }
     }
 
+
 }
+    
+    
