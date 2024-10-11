@@ -15,7 +15,12 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~~~");
         
          while(true) {
-
+             System.out.println("What Do You Want: "
+                    + " 1. Check Size"
+                    + " 2. Push Stack"
+                    + " 3. Pop Stack"
+                    + " 4. Exit");
+            int choice = sc.nextInt();
        }
  }
 }
