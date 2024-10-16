@@ -113,6 +113,11 @@ public class StackCalcu extends javax.swing.JFrame {
         });
 
         jButton2.setText("Pop");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Peek");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -431,6 +436,21 @@ public class StackCalcu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Top item of the stack: " + topValue);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         if (t3.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Nothing to pop: Stack is empty.");
+        return;
+        }
+
+        double poppedValue = Double.parseDouble(t3.getText()); 
+
+        JOptionPane.showMessageDialog(this, "Popped element: " + poppedValue);
+
+        t3.setText(t2.getText());
+        t2.setText(t1.getText()); 
+        t1.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
      private void handleNumberButtonClick(int number) {
         stack.push((double) number);
         inputbox.setText(String.valueOf(stack.peek())); 
