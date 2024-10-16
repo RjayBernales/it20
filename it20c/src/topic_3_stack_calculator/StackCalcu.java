@@ -332,7 +332,30 @@ public class StackCalcu extends javax.swing.JFrame {
     }//GEN-LAST:event_t1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+         try {
+
+        double value = Double.parseDouble(inputbox.getText()); 
+
+        if (!t1.getText().isEmpty() && 
+            !t2.getText().isEmpty() && 
+            !t3.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Cannot push: Stack is full!");
+            inputbox.setText(""); 
+            return;
+        }
+
+        t1.setText(t2.getText());  
+        t2.setText(t3.getText());  
+        t3.setText(String.valueOf(value));  // Display new value in jTextField3
+
+        stack.push(value);
+
+        // Clear the input field for new input
+        inputbox.setText("");  
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid number.");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1ActionPerformed
