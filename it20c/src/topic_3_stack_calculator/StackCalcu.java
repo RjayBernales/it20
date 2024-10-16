@@ -187,14 +187,39 @@ public class StackCalcu extends javax.swing.JFrame {
         });
 
         add.setText("+");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
 
         sub.setText("-");
+        sub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subActionPerformed(evt);
+            }
+        });
 
         mult.setText("*");
+        mult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multActionPerformed(evt);
+            }
+        });
 
         div.setText("/");
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
+            }
+        });
 
         equal.setText("=");
+        equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equalActionPerformed(evt);
+            }
+        });
 
         jButton19.setText(".");
 
@@ -349,6 +374,26 @@ public class StackCalcu extends javax.swing.JFrame {
     private void n0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n0ActionPerformed
         handleNumberButtonClick(0);
     }//GEN-LAST:event_n0ActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+         performOperation("+");
+    }//GEN-LAST:event_addActionPerformed
+
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+        performOperation("-");
+    }//GEN-LAST:event_subActionPerformed
+
+    private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
+        performOperation("*");
+    }//GEN-LAST:event_multActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        performOperation("/");
+    }//GEN-LAST:event_divActionPerformed
+
+    private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equalActionPerformed
      private void handleNumberButtonClick(int number) {
         stack.push((double) number);
         inputbox.setText(String.valueOf(stack.peek())); 
