@@ -346,17 +346,17 @@ public class StackCalcu extends javax.swing.JFrame {
 
         double value = Double.parseDouble(inputbox.getText()); 
 
-        if (!t1.getText().isEmpty() && 
+        if (!t3.getText().isEmpty() && 
             !t2.getText().isEmpty() && 
-            !t3.getText().isEmpty()) {
+            !t1.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Cannot push: Stack is full!");
             inputbox.setText(""); 
             return;
         }
 
-        t1.setText(t2.getText());  
-        t2.setText(t3.getText());  
-        t3.setText(String.valueOf(value));  // Display new value in jTextField3
+        t3.setText(t2.getText());  
+        t2.setText(t1.getText());  
+        t1.setText(String.valueOf(value));  // Display new value in jTextField3
 
         stack.push(value);
 
@@ -443,7 +443,7 @@ public class StackCalcu extends javax.swing.JFrame {
         return;
         }
 
-        double poppedValue = Double.parseDouble(t3.getText()); 
+        double poppedValue = Double.parseDouble(t1.getText()); 
 
         JOptionPane.showMessageDialog(this, "Popped element: " + poppedValue);
 
