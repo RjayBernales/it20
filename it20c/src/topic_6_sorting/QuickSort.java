@@ -55,5 +55,15 @@ public class QuickSort {
 
              int[] arr = null;
              long timeTaken = 0;
+             
+            while(true) {
+
+                 System.out.println("Choose a number: "
+                        + " 1. Add Elements"
+                        + " 2. View sorted array"
+                        + " 3. Exit");
+                int choice = sc.nextInt();
+                
+             }
     }
 }
