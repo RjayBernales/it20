@@ -59,6 +59,27 @@ public class BubbleSort {
                               arr[i] = sc.nextInt();
                             }
                             break;
+                     case 2: 
+                            System.out.println();
+                            if (arr == null) {
+                                System.out.println("Elements is not yet added. Please add elements first.");
+                                break;
+                            }
+
+                            System.out.println("Original array:");
+                            printArray(arr);
+
+                            long startTime = System.currentTimeMillis();
+                            bubbleSort(arr); 
+
+                            long endTime = System.currentTimeMillis();
+                            timeTaken = startTime - endTime;
+
+                            System.out.println("Sorted array:");
+                            printArray(arr);
+                            System.out.println("Sorting completed in: " + timeTaken + " milliseconds");
+
+                            break;    
                 }
             }
         }
