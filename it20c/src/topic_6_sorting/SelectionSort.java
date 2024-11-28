@@ -41,12 +41,25 @@ public class SelectionSort {
             
             while(true) {
 
-                 System.out.println("Kindly choose a number: "
-                        + " 1. Add array Elements"
-                        + " 2. View sorted array and time taken."
+                 System.out.println("Choose a number: "
+                        + " 1. Add Elements"
+                        + " 2. View sorted array"
                         + " 3. Exit");
                 int choice = sc.nextInt();
+                
+                switch(choice) {
+                    case 1:
+                            System.out.println();
+                            System.out.println("Enter the number of elements you want to store in the array:");
+                            int num = sc.nextInt();
+                            arr = new int[num];
 
+                            System.out.println("Enter " + num + " elements.");
+                            for(int i = 0; i < num; i++) {
+                              arr[i] = sc.nextInt();
+                            }
+                            break;
+                 }
               }
      }
 }
