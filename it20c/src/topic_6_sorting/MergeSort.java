@@ -64,11 +64,51 @@ public class MergeSort {
              
              while(true) {
 
-                 System.out.println("Choose a number: "
+                System.out.println("Choose a number: "
                         + " 1. Add Elements"
                         + " 2. View sorted arrays."
                         + " 3. Exit");
                 int choice = sc.nextInt();
+                
+                switch(choice) {
+                    case 1:
+                            System.out.println();
+                            System.out.println("Enter the number of elements you want to store in the array:");
+                            int num = sc.nextInt();
+                            arr = new int[num];
+
+                            System.out.println("Enter " + num + " elements.");
+                            for(int i = 0; i < num; i++) {
+                              arr[i] = sc.nextInt();
+                            }
+                            break;
+                     case 2: 
+                            System.out.println();
+                            if (arr == null) {
+                                System.out.println("Elements is not yet added. Please add elements first.");
+                                break;
+                            }
+
+                            System.out.println("Original array:");
+                            printArray(arr);
+
+                            long startTime = System.currentTimeMillis();
+                            mergeSort(arr); 
+
+                            long endTime = System.currentTimeMillis();
+                            timeTaken = startTime - endTime;
+
+                            System.out.println("Sorted array:");
+                            printArray(arr);
+                            System.out.println("Sorting completed in: " + timeTaken + " milliseconds");
+
+                            break;      
+                    case 3:
+                            System.out.println();
+                            System.out.println("Thank you! Comeback and run it again.");
+                            System.exit(0);
+                            break; 
+                 }
               }
     } 
 }
