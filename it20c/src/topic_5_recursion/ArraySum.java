@@ -36,5 +36,11 @@ public class ArraySum {
         for (int i = 0; i < size; i++) {
             numbers[i] = sc.nextInt(); 
         }
+        int result = calculator.sum(numbers, size);
+        
+        System.out.println("Sum of the array is: " + result);
+        
+        sc.close();
+	
     }
 }
