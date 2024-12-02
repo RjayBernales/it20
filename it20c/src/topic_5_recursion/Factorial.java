@@ -23,6 +23,16 @@ public class Factorial {
 	    }
      public static void main(String[] args) {
 		
-		 Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
+            Factorial calculator = new Factorial();
+	        
+	     System.out.print("Enter a number to calculate its factorial: ");
+	     int number = scanner.nextInt(); 
+	        
+	     int result = calculator.factorial(number);
+	        
+	     System.out.println("Factorial of " + number + " is: " + result);
+	        
+	     scanner.close(); 
      }
 }
