@@ -22,5 +22,12 @@ public class ArraySum {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        ArraySum calculator = new ArraySum();
+        
+	System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        
+        System.out.println("The size of the array is: " + size);
+        System.out.println();
     }
 }
