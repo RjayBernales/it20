@@ -29,5 +29,12 @@ public class ArraySum {
         
         System.out.println("The size of the array is: " + size);
         System.out.println();
+        int[] numbers = new int[size];
+        
+        //Iterate throughout the array size
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            numbers[i] = sc.nextInt(); 
+        }
     }
 }
