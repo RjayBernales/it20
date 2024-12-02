@@ -6,6 +6,8 @@
 
 package topic_5_recursion;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Admin
@@ -17,5 +19,8 @@ public class ArraySum {
         }
         // Recursive case
         return arr[n - 1] + sum(arr, n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
     }
 }
