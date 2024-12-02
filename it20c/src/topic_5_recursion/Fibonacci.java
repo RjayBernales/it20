@@ -6,6 +6,8 @@
 
 package topic_5_recursion;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Admin
@@ -19,4 +21,8 @@ public class Fibonacci {
 	     // Recursive case
 	     return fibonacci(n - 1) + fibonacci(n - 2);
 	  }
+    public static void main(String[] args) {
+	     
+		 Scanner sc = new Scanner(System.in);
+    }
 }
